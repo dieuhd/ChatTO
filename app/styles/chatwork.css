@@ -1,0 +1,152 @@
+#_toList{
+    /*opacity: 0!important;*/
+    /*width: 0!important;*/
+    /*height: 0!important;*/
+}
+.toListUser{
+    height: 150px;
+    background-color: transparent;
+    width: 100%;
+    margin-top: -160px;
+    display: none;
+    position: absolute;
+    z-index: 5000;
+}
+.dataListUser{
+    height: 150px;
+    background-color: white;
+    margin: 0 13px;
+    width: 100%;
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #b3b3b3;
+    position: relative;
+}
+.dataListUser{
+    width: auto;
+}
+.dataListUser:after, .dataListUser:before {
+    top: 100%;
+    left: 55px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.dataListUser:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #ffffff;
+    border-width: 15px;
+    margin-left: -15px;
+}
+.dataListUser:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-top-color: #b3b3b3;
+    border-width: 17px;
+    margin-left: -17px;
+}
+
+.dataListUser .header {
+    min-height: 25px;
+    border-bottom: 1px solid darkgray;
+    padding: 4px;
+}
+.dataListUser .header .searchUser{
+    border-radius: 3px;
+    width: 175px;
+    position: relative;
+    display: inline-block;
+}
+.dataListUser .header .action{
+    display: inline-block;
+    padding: 0 4px;
+    line-height: 18px;
+    font-size: 14px;
+    margin: 0 4px;
+}
+.dataListUser .header .action > a {
+    cursor: pointer;
+}
+.dataListUser .header .searchUser .iconSearchUser{
+    margin-left: 4px;
+    margin-top: 5px;
+    position: absolute;
+}
+.dataListUser .header .searchUser .inputTextSearch{
+    padding-left: 24px!important;
+}
+.dataListUser .header .searchUser .btnCloseSearch
+{
+    position: absolute;
+    right: 2px;
+    top:4px;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+.dataListUser .listUser {
+    height: 108px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 4px;
+}
+.dataListUser .listUser .user{
+    display: inline-block;
+    height: 30px;
+    padding: 0 5px;
+    line-height: 28px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+.dataListUser .listUser .user:hover{
+    opacity: 0.76;
+}
+.dataListUser .listUser > .user > span.name{
+    line-height: 28px;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.dataListUser .listUser > .user > span.btnCancelSelect{
+    position: relative;
+    right: 0;
+    top: -6px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.dataListUser .listUser > .user > img {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dataListUser .listUser > .selected  {
+    -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    box-shadow:inset 0px 1px 0px 0px #dcecfb;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+    background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:-ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+    background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+    background-color:#bddbfa;
+    border: none;
+}
+.a_selected{
+    text-decoration: underline;
+    font-weight: bold;
+}

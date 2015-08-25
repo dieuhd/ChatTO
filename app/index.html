@@ -1,0 +1,69 @@
+<!doctype html>
+<html ng-app="CwPlus">
+  <head>
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/colorpicker.css -->
+    <link href="styles/colorpicker.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller="OptionController">
+  <div class="navbar">
+      <img class="logo" src="images/icon-38.png">
+      <div class="title"><span>Chat</span>To</div>
+  </div>
+    <div class="container">
+        <h3>Chatwork extension</h3>
+        <div>
+            <span>Enable ChatTo </span><input ng-model="enable" type="checkbox" ng-click="switchCwTO()">
+        </div>
+        <div class="items">
+            <span>Selected color:</span>
+            <span pickcolor color="color.bgColor1" ng-model="color.bgColor1"  class="color-box" style="background-color: {{color.bgColor1}}"></span>
+            <span pickcolor color="bgColor2" ng-model="color.bgColor2"  class="color-box" style="background-color: {{color.bgColor2}}"></span>
+            <span pickcolor color="bgColor3" ng-model="color.bgColor3"  class="color-box" style="background-color: {{color.bgColor3}}"></span>
+        </div>
+        <div class="items">
+            <span>Font color:</span>
+            <span pickcolor color="color.fontColor" ng-model="color.fontColor"  class="color-box" style="background-color: {{color.fontColor}}"></span>
+        </div>
+        <div ng-click="reset()" class="user" style="border: none;
+        -moz-box-shadow:inset 0px 1px 0px 0px {{color.bgColor1}};
+    -webkit-box-shadow:inset 0px 1px 0px 0px {{color.bgColor1}};
+    box-shadow:inset 0px 1px 0px 0px {{color.bgColor1}};
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, {{color.bgColor2}}), color-stop(1, {{color.bgColor3}}));
+    background:-moz-linear-gradient(top, {{color.bgColor2}} 5%, {{color.bgColor3}} 100%);
+    background:-webkit-linear-gradient(top, {{color.bgColor2}} 5%, {{color.bgColor3}} 100%);
+    background:-o-linear-gradient(top, {{color.bgColor2}} 5%, {{color.bgColor3}} 100%);
+    background:-ms-linear-gradient(top, {{color.bgColor2}} 5%, {{color.bgColor3}} 100%);
+    background:linear-gradient(to bottom, {{color.bgColor2}} 5%, {{color.bgColor3}} 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='{{color.bgColor2}}', endColorstr='{{color.bgColor3}}',GradientType=0);
+    background-color:{{color.bgColor2}};">
+            <img src="images/icon-38.png">
+            <span class="name" style="color:{{color.fontColor}};">Restore Defaults</span>
+            <span class="btnCancelSelect" style="color:{{color.fontColor}};">x</span>
+        </div>
+    </div>
+
+
+    <!-- build:js scripts/main.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/colorpicker.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/options.js -->
+    <script src="scripts/options.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
